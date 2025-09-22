@@ -2,6 +2,8 @@
 
 This is my template repo for Rust projects. It also serves as my personal knowledge base for Rust, the language.
 
+Most info is taken from [this tutorial](https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html).  
+
 # cargo
 
 cargo is the package manager and build system for rust.  
@@ -13,7 +15,8 @@ It makes a new directory with the same name. It contains a `src/` directory cont
 
 `cargo check` checks the project for errors without building or running it.  
 
-To build the project for release: `cargo build --release`. This builds the project with optimizations.
+To build the project for release: `cargo build --release`. This builds the project with optimizations.  
+
 
 
 
