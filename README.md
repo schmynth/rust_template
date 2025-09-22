@@ -18,8 +18,18 @@ It makes a new directory with the same name. It contains a `src/` directory cont
 To build the project for release: `cargo build --release`. This builds the project with optimizations.  
 
 
+# basic io
 
+To print to stdout: `println!("The variable has the value {variable}");`  
+This prints a line to stdout with the value of `variable` at the placeholder initiated with the curly braces.  
 
+```
+let mut guess = String::new();
+
+io::stdin()
+    .read_line(&mut guess)
+    .expect("Failed to read line");
+```
 
 
 
