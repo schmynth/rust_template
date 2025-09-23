@@ -18,12 +18,18 @@ It makes a new directory with the same name. It contains a `src/` directory cont
 To build the project for release: `cargo build --release`. This builds the project with optimizations.  
 
 
-# basic io
+# basic I/O
 
 To print to stdout: `println!("The variable has the value {variable}");`  
 This prints a line to stdout with the value of `variable` at the placeholder initiated with the curly braces.  
 
+If some item is not in the [prelude](https://doc.rust-lang.org/std/prelude/index.html), it has to be included with `use`.  
+
+To read input:  
+
 ```
+use std::io;
+
 let mut guess = String::new();
 
 io::stdin()
@@ -31,7 +37,11 @@ io::stdin()
     .expect("Failed to read line");
 ```
 
+# variables
 
+Variables are immutable by default. That means if you create a variable like this:  
+`let apples = 5;`  
+apples is a variable with the value of 5, that can not be changed.  
 
 
 
