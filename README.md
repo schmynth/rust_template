@@ -4,14 +4,14 @@ This is my template repo for Rust projects. It also serves as my personal knowle
 
 Most info is taken from [this tutorial](https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html).  
 
-# basic syntax
+## basic syntax
 
-## comments
+### comments
 
 Single line comments are introduced by `//`.  
 
 
-# cargo
+## cargo
 
 cargo is the package manager and build system for rust.  
 
@@ -24,12 +24,12 @@ It makes a new directory with the same name. It contains a `src/` directory cont
 
 To build the project for release: `cargo build --release`. This builds the project with optimizations.  
 
-## crates
+### crates
 
 If you want to include Rust libraries called "crates", you can do so in the `Cargo.toml` file. These crates will then be downloaded from  
 [crates.io](crates.io). For random numbers:  
 
-```
+```toml
 [dependencies]
 rand = "0.8.5"
 ```  
@@ -39,7 +39,10 @@ This will add `rand` with version > 0.8.5 and < 0.9.x.
 
 # basic I/O
 
-To print to stdout: `println!("The variable has the value {variable}");`  
+To print to stdout: 
+```rust
+println!("The variable has the value {variable}");
+```
 This prints a line to stdout with the value of `variable` at the placeholder initiated with the curly braces.  
 
 If some item is not in the [prelude](https://doc.rust-lang.org/std/prelude/index.html), it has to be included with `use`.  
@@ -85,7 +88,7 @@ fn main() {
 match is comparable to a switch statement.  
 The following code compares `guess` to `secret_number`.
 
-```
+```rust
 match guess.cmp(&secret_number) {
     Ordering::Less => println!("Too small!"),
     Ordering::Greater => println!("Too big!"),
@@ -99,7 +102,7 @@ match guess.cmp(&secret_number) {
 
 ## exception handling
 
-```
+```rust
 let guess: u32 = match guess.trim().parse() {
     Ok(num) => num,
     Err(_) => continue,
