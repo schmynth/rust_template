@@ -26,7 +26,8 @@ To build the project for release: `cargo build --release`. This builds the proje
 
 ## crates
 
-If you want to include Rust libraries called "crates", you can do so in the `Cargo.toml` file. For random numbers:  
+If you want to include Rust libraries called "crates", you can do so in the `Cargo.toml` file. These crates will then be downloaded from  
+[crates.io](crates.io). For random numbers:  
 
 ```
 [dependencies]
@@ -66,5 +67,41 @@ Variables are immutable by default. That means if you create a variable like thi
 apples is a variable with the value of 5, that can not be changed. If you want the variable to be mutable, it has to be created as such:  
 `let mut apples = 5;`  
 
+# functions
+
+Functions are defined with the following syntax:  
+```rust
+fn main() {
+    println!("Hello World!");
+}
+```
+
+# control flow
+
+## conditional execution
+
+### match expression
+  
+match is comparable to a switch statement.  
+The following code compares `guess` to `secret_number`.
+
+```
+match guess.cmp(&secret_number) {
+    Ordering::Less => println!("Too small!"),
+    Ordering::Greater => println!("Too big!"),
+    Ordering::Equal => {
+        println!("You win!");
+        println!("Congratulations!);
+    }
+}
+```
 
 
+## exception handling
+
+```
+let guess: u32 = match guess.trim().parse() {
+    Ok(num) => num,
+    Err(_) => continue,
+};
+```
