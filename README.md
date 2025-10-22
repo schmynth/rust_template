@@ -18,8 +18,12 @@ Variables are immutable by default. That means if you create a variable like thi
 ```rust
 let apples = 5;
 ```
-apples is a variable with the value of 5, that can not be changed. If you want the variable to be mutable, it has to be created as such:  
-`let mut apples = 5;`  
+
+`apples` is a variable with the value of 5, that can not be changed. If you want the variable to be mutable, it has to be created as such:  
+
+```rust
+let mut apples = 5;
+```
 
 ### functions
 
