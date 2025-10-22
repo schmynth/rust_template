@@ -4,6 +4,21 @@ This is my template repo for Rust projects. It also serves as my personal knowle
 
 Most info is taken from [this tutorial](https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html).  
 
+Contents:
+
+- [Rust template repo](#rust-template-repo)
+    - [basic syntax](#basic-syntax)
+        - [comments](#comments)
+        - [variables](#variables)
+        - [functions](#functions)
+    - [cargo](#cargo)
+        - [crates](#crates)
+    - [basic I/O](#basic-i/o)
+    - [control flow](#control-flow)
+        - [conditional execution](#conditional-execution)
+            - [match expression](#match-expression)
+    - [exception handling](#exception-handling)
+
 ## basic syntax
 
 ### comments
