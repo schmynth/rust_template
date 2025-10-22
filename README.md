@@ -10,6 +10,24 @@ Most info is taken from [this tutorial](https://doc.rust-lang.org/book/ch02-00-g
 
 Single line comments are introduced by `//`.  
 
+### variables
+
+To create a variable, the keyword `let` is used.  
+
+Variables are immutable by default. That means if you create a variable like this:  
+```rust
+let apples = 5;```
+apples is a variable with the value of 5, that can not be changed. If you want the variable to be mutable, it has to be created as such:  
+`let mut apples = 5;`  
+
+### functions
+
+Functions are defined with the following syntax:  
+```rust
+fn main() {
+    println!("Hello World!");
+}
+```
 
 ## cargo
 
@@ -37,7 +55,7 @@ rand = "0.8.5"
 This will add `rand` with version > 0.8.5 and < 0.9.x.  
 
 
-# basic I/O
+## basic I/O
 
 To print to stdout: 
 ```rust
@@ -49,7 +67,7 @@ If some item is not in the [prelude](https://doc.rust-lang.org/std/prelude/index
 
 To read input:  
 
-```
+```rust
 use std::io;
 
 let mut guess = String::new();
@@ -61,29 +79,12 @@ io::stdin()
 
 Here, `expect()` is exception handling.  
 
-# variables
 
-To create a variable, the keyword `let` is used.  
+## control flow
 
-Variables are immutable by default. That means if you create a variable like this:  
-`let apples = 5;`  
-apples is a variable with the value of 5, that can not be changed. If you want the variable to be mutable, it has to be created as such:  
-`let mut apples = 5;`  
+### conditional execution
 
-# functions
-
-Functions are defined with the following syntax:  
-```rust
-fn main() {
-    println!("Hello World!");
-}
-```
-
-# control flow
-
-## conditional execution
-
-### match expression
+#### match expression
   
 match is comparable to a switch statement.  
 The following code compares `guess` to `secret_number`.
