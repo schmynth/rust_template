@@ -129,3 +129,9 @@ let guess: u32 = match guess.trim().parse() {
     Err(_) => continue,
 };
 ```
+
+Most functions in Rust return a Result type, which is an enum that has variants Ok and Err.  
+Ok means that the function ran as intended. Err indicates, that something went wrong and contains more info on that.  
+In the above example, the `parse()` function returns that Enum, which can then be matched. If `parse()` was able to convert guess into a u32 number, it returns that number in the Ok return value. The `match` expression then returns the number `num`.  
+If parse fails, exection is continued.  
+
